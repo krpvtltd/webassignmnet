@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Group Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .chat-container {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .chat-messages {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .chat-container-1{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        input[type="text"],
+        button {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .chat-messages{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+            <img src="photo/Flag_of_India.svg.png" alt="" height="100px" style="border-radius: 50%;">
+        </div>
+        <div class="chat-container-1">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const message = messageInput.value.trim();
+            if (message !== '') {
+                const chatMessages = document.getElementById('chat-messages');
+                const newMessage = document.createElement('div');
+                newMessage.textContent = message;
+                chatMessages.appendChild(newMessage);
+                messageInput.value = '';
+                // You might want to send the message to a server here for processing/storage
+            }
+        }
+
+    </script>
+</body>
+
+</html>

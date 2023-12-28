@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Simple Chat App</title>
+  <style>
+    #chat {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    #messages {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    input {
+      width: 70%;
+      padding: 5px;
+      margin-right: 5px;
+    }
+    button {
+      padding: 5px;
+    }
+
+    #button{
+      border: none;
+      background-color: transparent;
+    }
+  </style>
+</head
+<body>
+  <div id="chat">
+   <div id="messages">
+    <button id="button"></button>
+   </div>
+    <input type="file" id="messageInput">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="clearMessages()">Clear</button>
+  </div>
+  <script>
+    // Function to reverse string
+    function ReverseString(str) {
+        return str.split('').reverse().join('')
+    }
+    function appendMessage(message,button) {
+      const messagesDiv = document.getElementById('messages');
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = message;
+      messagesDiv.appendChild(messageDiv);
+      
+      // if (button == onclick(sendMessage())){
+      //   const none = document.getElementById(button);
+      // }
+      const download1 = document.getElementById('button');
+      const download = document.createElement('button');
+      download.DOCUMENT_TYPE_NODE = button;
+      download1.appendChild(download);
+    }
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+      if (message.trim() !== '')   {
+        const downloadElement = document.createElement('button')
+        newMessage = message.slice(12, -4);
+        newMessage = ReverseString(newMessage);
+        dot = newMessage.indexOf('.');
+        newMessage = newMessage.slice(dot+1);
+        newMessage = ReverseString(newMessage);
+        appendMessage(newMessage);
+        messageInput.value = '';
+      }
+    }
+    function clearMessages() {
+      const messagesDiv = document.getElementById('messages');
+      messagesDiv.innerHTML = '';
+    }
+  </script>
+</body>
+</html>
