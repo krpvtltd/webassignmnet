@@ -517,11 +517,11 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: center;
 }
 
-.all-addd-main {
+.all-addd-main  {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px;
     margin: 20px;
-    position: sticky;
+    position: sticky;   
     bottom: 0;
     padding: 20px;
     background-color: white;
@@ -864,7 +864,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color:#dc3545;
     height: 30px;
     width: 120px;
-    margin-top: 9px;
+    margin-top: 10px;
     cursor: pointer;
     color: white;
     font-weight: bold;
@@ -916,4 +916,36 @@ input[type="search"]::-webkit-search-results-decoration {
         display: flex;
         justify-content: center;
     }
+}
+
+.post-text-input-div{
+    display: flex;
+    justify-content: center;
+}
+
+.post-text-input-div button{
+    height: 34px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.post-text-input-div input{
+    width: 65%;
+    margin-bottom: 10px;   
+    border: none;
+    border-radius: 5px;
+    height: 34px;
+}
+
+.post-text-input-div input:focus{
+    outline: none;
+}   
+
+.post-text-input-div input::placeholder{
+    color:  rgba(0, 0, 0, 0.664);   
+}
+
+.send-button{
+    border: none;
+    background-color: transparent;
 }

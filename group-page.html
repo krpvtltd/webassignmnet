@@ -108,12 +108,12 @@
         </div>
     </div>
     <div class="all-chat-main-div">
-        <div class="chat-div-1">
+        <div class="chat-div-1" id="messages">
             <div class="main-ids-header">
                 <div class="main-ids-header-1">
                     <div class="main-ids-header-img">
                         <img src="https://i.ibb.co/w6BBYhW/Flag-of-India-svg.png" alt="">
-                        <p>Kedar Bhal 
+                        <p>Kedar Bhal
                             <span class="fa fa-stack fa-lg main-varifier">
                                 <i class="fa fa-certificate fa-stack-2x check-color-blue "></i>
                                 <i class="fa fa-check fa-stack-1x fa-inverse two"></i>
@@ -172,28 +172,20 @@
             </button>
             <button>moose wala</button>
         </div> -->
-        <div class="postshare-div">
-            <button onclick="openPopup()"><i class="fa-solid fa-plus"></i> Add Post</button>
+
+        <div class="postshare-2">
+            <div class="post-text-input-div">
+                <input type="text" class="post-txt-input" placeholder="Send Text"  id="messageInput">
+                <button class="send-button" onclick="sendMessage()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+            <div class="postshare-1">
+                <div class="postshare-div">
+                    <button onclick="openPopup()"><i class="fa-solid fa-plus"></i> Send File</button>
+                </div>
+            </div>
         </div>
     </div>
-    <script>
-        // onclick="toggle_div_fun('sectiontohide');"
-        // function toggle_div_fun(id) {
-        //     var divelement = document.getElementById(id);
-        //     if (divelement.style.display == 'none')
-        //         divelement.style.display = 'flex';
-        //     else
-        //         divelement.style.display = 'none';
-        // }
-        function openPopup() {
-            var popup = document.getElementById("popup");
-            popup.style.display = "block";
-        }
-
-        function closePopup() {
-            var popup = document.getElementById("popup");
-            popup.style.display = "none";
-        }
+    <script src="all-js.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
