@@ -39,6 +39,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0px;
+    z-index: 111;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
@@ -803,4 +804,116 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .location-para{
     margin-left: 20px;
+}
+
+/* group-page.html css */
+
+.all-chat-main-div{
+    margin: 40px 20px;
+    padding: 20px;
+    /* width: 80%; */
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.all-chat-main-div-1-1{
+    margin-top: 40px;
+}
+
+.main-ids-header-img img{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    box-shadow: rgba(0, 0, 0, 0.548) 0px 1px 3px 0px, rgba(0, 0, 0, 0.548) 0px 0px 0px 1px;
+    border-radius: 50%;
+}
+
+.main-ids-header-img{
+    display: flex;
+}
+
+.main-ids-header-img p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.main-ids-header-1{
+    /* margin: 40px 20px; */
+    padding: 20px;
+    margin-bottom: 25px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.445);
+    background-color: white;
+}
+
+.main-ids-header-1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-ids-header-button{
+    /* width: 400px; */
+    display: flex;
+    justify-content: right;
+}
+
+.Leave-group{
+    border: none;
+    background-color:#dc3545;
+    height: 30px;
+    width: 120px;
+    margin-top: 9px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    /* padding:20px; */
+}
+
+.Leave-group-icon{
+    display: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 13px;
+    background-color: transparent;
+}
+
+@media (min-width:0px) and (max-width:718px) {
+    .Leave-group{
+        display: none;
+    }
+    .Leave-group-icon{
+        display: flex;
+        /* margin-left: 50%; */
+    }
+}
+
+
+.chat-post-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+@media (min-width:0px) and (max-width:507px) {
+    .chat-post-1{
+        width: 100%;
+    }
+}
+
+@media (min-width:0px) and (max-width:311px) {
+    .main-ids-header-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
